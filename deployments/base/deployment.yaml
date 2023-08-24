@@ -31,9 +31,9 @@ spec:
         app: kubernetes-bootcamp
     spec:
       containers:
-      - image: docker.io/andrewdarley/basic:webserver-2
+      - image: docker.io/andrewdarley/basic:webserver-1
         imagePullPolicy: IfNotPresent
-        name: basic
+        name: nginx 
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
