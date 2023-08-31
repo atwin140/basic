@@ -3,7 +3,14 @@ kind: Kustomization
 resources:
   - ../../base/
 namespace: app-dev
+
+
+patches:
+
 - patch: |-
     - op: replace
       path: /spec/template/spec/containers/0/image
       value: docker.io/andrewdarley/basic:webserver-2
+  target:
+    kind: Deployment
+    name: kubernetes-bootcamp
