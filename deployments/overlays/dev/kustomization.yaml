@@ -9,7 +9,7 @@ patches:
 - patch: |-
     - op: replace
       path: /spec/template/spec/containers/0/image
-      value: docker.io/andrewdarley/basic:webserver-2
+      value: docker.io/andrewdarley/basic:fluxtest
   target:
     kind: Deployment
     name: kubernetes-bootcamp
