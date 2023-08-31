@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - ../../base/
 namespace: app-dev
-images:
-- name: nginx
-  newTag: webserver-2
+- patch: |-
+    - op: replace
+      path: /spec/template/spec/containers/0/image
+      value: docker.io/andrewdarley/basic:webserver-2
